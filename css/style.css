@@ -15,7 +15,7 @@
 }
 
 .bar {
-	background-color: grey;
+	background-color: green;
 	margin-top: 1px;
 	outline: 1px solid white;
 	color: white;
@@ -23,6 +23,26 @@
 	float: left;
 }
 
+/*ATTEMPT TO ADD A GRAPH FOR PERCENTAGE OF BLACK STUDENTS AMONG GRADUATES*/
+/*.barBlkPop {
+	background-color: blue;
+	margin-top: 1px;
+	outline: 1px solid white;
+	color: white;
+	padding: 4px;
+	float: left;
+} */
+
+/*ATTEMPT TO ADD A LEGEND TO GRAPH*/
+/*.block1 {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: green;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+} */
 
 /* ADDED CLASS NAME FOR 2015 TO MAKE IT RED */
 .bar-item.year2015 .bar {

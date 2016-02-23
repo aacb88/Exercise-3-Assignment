@@ -38,8 +38,11 @@ function loopThroughData(schoolsData) {
 
 		var schoolName = schoolsData[i]["SCHOOL_NAME"];
 		var year = schoolsData[i]["YEAR"];
-		var gradPct = schoolsData[i]["GRADUATES_PCT"];
-
+		var gradBlkPct = schoolsData[i]["GRADUATES_BLACK_PCT"];
+		//var BlkGrad = schoolsData[i]["GRADUATES_BLACK"];
+		//var GradPop = schoolsData[i]["GRADUATES"];
+		//var BlackPop = BlkGrad/GradPop * 100;
+		
 		//If graduation percent is less thatn 50%...
 		//We use the `<` operator to test for values less than 50%
 		//And we use `&&` to indicate an AND condition,
@@ -49,10 +52,12 @@ function loopThroughData(schoolsData) {
 		// 	console.log(year, schoolName, gradPct);
 		// }
 
-		var barWidth = gradPct * 10;
+		var barWidth = gradBlkPct * 10;
+		//var barWidthBlkPop = BlackPop * 10;
+		
 
 		//If the school name matches the one we're looking for, add some markup onto our page.
-		if (schoolName === "FREDERICK DOUGLASS HIGH") {
+		if (schoolName === "ROCK BRIDGE SR. HIGH") {
 
 			//All I'm doing here is writing some markup. The markup is exactly the same each time...
 			//...except for three variables: the width of the bar (calculated above), the year and the graduation rate.
@@ -62,10 +67,17 @@ function loopThroughData(schoolsData) {
 			$(".chart").append(
 				"<div class='bar-item year"+year+"'>"+
 					"<div class='bar' style='width: "+barWidth+"px'>"+year+"</div>"+
-					"<div class='val'>"+gradPct+"%</div>"+
+					"<div class='val'>"+gradBlkPct+"%</div>"+
 				"</div>"	
 			);
 
+			//!! $(".chart").append(
+				//<div class='bar-item year"+year+"'>"+
+					//"<div class='barBlkPop' style='width: "+barWidthBlkPop+"px'>"+year+"</div>"+
+					//"<div class='val'>"+BlackPop+"%</div>"+
+				//"</div>"	
+			//);
+				
 			//See the style.css document for CSS to make it pretty.
 		}
 
